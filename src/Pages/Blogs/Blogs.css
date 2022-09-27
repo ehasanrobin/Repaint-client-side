@@ -1,0 +1,23 @@
+.recent-posts-box {
+  border-top: 4px solid;
+  /* border-color: orange; */
+  border-bottom: 4px solid;
+  border-color: #ff5000;
+}
+.post-title {
+  position: relative;
+}
+.post-title::after {
+  content: "";
+  position: absolute;
+  background: #ff5000;
+  border-radius: 20px;
+  height: 5px;
+  width: 60px;
+  bottom: -10px;
+  left: 0;
+}
+ul.social-menu li a {
+  padding: 0px 0;
+  display: block;
+}

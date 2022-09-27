@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Painter's Tape.",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipiscing elit enim ullamcorper nisl,",
+    "img": "https://i.ibb.co/4PQN1tR/download-4.jpg",
+    "minOrderQuanity": 100,
+    "orderQuanity": 3500,
+    "price": 99
+  },
+  {
+    "name": "Brushes",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipiscing elit enim ullamcorper nisl,",
+    "img": "https://i.ibb.co/x6qsgrD/images-1.jpg",
+    "minOrderQuanity": 100,
+    "orderQuanity": 3500,
+    "price": 99
+  },
+  {
+    "name": "Rollers",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipiscing elit enim ullamcorper nisl,",
+    "img": "https://i.ibb.co/4RFt8L2/download-2.jpg",
+    "minOrderQuanity": 100,
+    "orderQuanity": 3500,
+    "price": 99
+  },
+  {
+    "name": "Paint Brush Cleaner",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipiscing elit enim ullamcorper nisl,",
+    "img": "https://i.ibb.co/4Rbs285/images-3.jpg",
+    "minOrderQuanity": 100,
+    "orderQuanity": 3500,
+    "price": 99
+  },
+  {
+    "name": "Plastic Bucket",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipiscing elit enim ullamcorper nisl,",
+    "img": "https://i.ibb.co/T1kM2f7/download-1.jpg",
+    "minOrderQuanity": 100,
+    "orderQuanity": 3500,
+    "price": 99
+  },
+  {
+    "name": "Plastic Roller Tray",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipiscing elit enim ullamcorper nisl,",
+    "img": "https://i.ibb.co/Ltk8JxR/download-3.jpg",
+    "minOrderQuanity": 100,
+    "orderQuanity": 3500,
+    "price": 99
+  }
+]

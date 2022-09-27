@@ -1,0 +1,97 @@
+.banner-img {
+  background-image: url("../../images/bg11.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+header.bg-white {
+  background: white;
+  padding: 10px;
+}
+.service-box img {
+  min-height: 243px;
+}
+.service-box:hover img {
+  transform: scale(1.1);
+  transition: 1s;
+  overflow: hidden;
+}
+.summerybox {
+  color: #fff;
+}
+.widthusImg {
+  margin-top: -115px;
+}
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  max-width: 300px;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+  .review-slider {
+    max-width: 350px;
+  }
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #ff5000;
+}
+ul.menu.menu-horizontal.p-0 li a:hover {
+  background: #ff5000;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+footer ul li a {
+  line-height: 32px !important;
+  display: block;
+  color: #000;
+}
+footer ul li a:hover {
+  color: #ff5000;
+  transition: 0.5s;
+}
+.logo {
+  max-width: 67px;
+}
+.login-logo img {
+  max-width: 200px;
+}
+.login-social.max-w-lg.mx-auto button {
+  background: transparent;
+  color: #000;
+  font-size: 24px;
+  height: 60px;
+  width: 60px;
+  /* padding: 17px; */
+}
