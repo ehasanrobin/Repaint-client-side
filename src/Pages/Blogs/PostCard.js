@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const PostCard = ({ blog }) => {
   const { title, img, desc, date } = blog;
   return (
-    <div className="card  bg-base-100 shadow-xl mt-4">
+    <div className="card   shadow-xl mt-4">
       <figure>
         <img src={img} alt="Shoes" />
       </figure>

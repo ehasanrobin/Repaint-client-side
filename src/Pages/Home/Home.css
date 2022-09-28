@@ -8,6 +8,9 @@ header.bg-white {
   background: white;
   padding: 10px;
 }
+.service-box {
+  background-color: #fff !important;
+}
 .service-box img {
   min-height: 243px;
 }
@@ -61,6 +64,11 @@ body {
   }
   .review-slider {
     max-width: 350px;
+  }
+}
+@media screen and (max-width: 465px) {
+  .review-slider {
+    max-width: 250px;
   }
 }
 

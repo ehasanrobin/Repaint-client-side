@@ -24,7 +24,7 @@ const Orders = ({ order }) => {
     error,
     data: profile,
   } = useQuery(["users", user], () =>
-    fetch(`http://localhost:5000/users/${user.email}`, {
+    fetch(`https://repain-server-side.herokuapp.com/users/${user.email}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -72,7 +72,7 @@ const Orders = ({ order }) => {
 
     await axiosPrivate({
       method: "post",
-      url: `http://localhost:5000/orders`,
+      url: `https://repain-server-side.herokuapp.com/orders`,
       data: order,
     }).then(async (res) => {
       navigate("/dashboard/");
@@ -155,7 +155,7 @@ const Orders = ({ order }) => {
         </form>
       </div>
       <div>
-        <div className="card card-side bg-base-100 shadow-xl">
+        <div className="card card-side  shadow-xl">
           <figure>
             <img src={img} alt="Movie" />
           </figure>

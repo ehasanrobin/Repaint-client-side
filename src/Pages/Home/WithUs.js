@@ -4,7 +4,10 @@ const WithUs = () => {
   return (
     <div className="hero min-h-[50%] my-28 bg-cream">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <img src={orang} className="max-w-md rounded-full  flex-1 widthusImg" />
+        <img
+          src={orang}
+          className=" w-full max-w-md rounded-full  flex-1 widthusImg"
+        />
         <div className="flex-1 p-12">
           <h1 className="text-5xl font-bold">
             Consult Your Color Selection With Us

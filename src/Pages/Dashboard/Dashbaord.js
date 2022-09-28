@@ -11,7 +11,7 @@ const Dashbaord = () => {
   useEffect(() => {
     axiosPrivate({
       method: "GET",
-      url: `http://localhost:5000/users/${user.email}`,
+      url: `https://repain-server-side.herokuapp.com/users/${user.email}`,
     }).then((res) => {
       setUserAdmin(res.data);
     });
@@ -24,9 +24,9 @@ const Dashbaord = () => {
         <div className="drawer-content flex flex-col ">
           <label
             htmlFor="my-drawer-2"
-            className="btn btn-primary drawer-button lg:hidden"
+            className="btn btn-orange mt-3 drawer-button lg:hidden"
           >
-            Open drawer
+            DashBoard Menu
           </label>
           <h1 className="text-4xl font-bold p-5 bg-orange">
             welcome to dashboad {user.displayName}
@@ -36,7 +36,7 @@ const Dashbaord = () => {
         </div>
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-          <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+          <ul className="menu p-4 overflow-y-auto w-80  text-base-content">
             {userAdmin.role !== "admin" && (
               <>
                 <li>
