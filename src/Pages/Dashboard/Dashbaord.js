@@ -11,7 +11,7 @@ const Dashbaord = () => {
   useEffect(() => {
     axiosPrivate({
       method: "GET",
-      url: `https://repain-server-side.herokuapp.com/users/${user.email}`,
+      url: `http://localhost:5000/users/${user.email}`,
     }).then((res) => {
       setUserAdmin(res.data);
     });
@@ -40,7 +40,7 @@ const Dashbaord = () => {
             {userAdmin.role !== "admin" && (
               <>
                 <li>
-                  <Link to="">My Orders</Link>
+                  <Link to="myOrders">My Orders</Link>
                 </li>
 
                 <li>
@@ -49,10 +49,16 @@ const Dashbaord = () => {
               </>
             )}
             <li>
-              <Link to="myprofile">My profile</Link>
+              <Link to="">My profile</Link>
             </li>
             {userAdmin.role === "admin" && (
               <>
+                <li>
+                  <Link to="orders">Orders</Link>
+                </li>
+                <li>
+                  <Link to="products">Products</Link>
+                </li>
                 <li>
                   <Link to="Allusers">All Users</Link>
                 </li>

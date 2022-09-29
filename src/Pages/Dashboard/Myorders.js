@@ -13,7 +13,7 @@ const Myorders = () => {
     error,
     data: orders,
   } = useQuery(["orders", user], () =>
-    fetch(`https://repain-server-side.herokuapp.com/orders/${user?.email}`, {
+    fetch(`http://localhost:5000/orders/${user?.email}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

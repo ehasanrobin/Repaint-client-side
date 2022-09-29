@@ -24,7 +24,7 @@ const Orders = ({ order }) => {
     error,
     data: profile,
   } = useQuery(["users", user], () =>
-    fetch(`https://repain-server-side.herokuapp.com/users/${user.email}`, {
+    fetch(`http://localhost:5000/users/${user.email}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -72,7 +72,7 @@ const Orders = ({ order }) => {
 
     await axiosPrivate({
       method: "post",
-      url: `https://repain-server-side.herokuapp.com/orders`,
+      url: `http://localhost:5000/orders`,
       data: order,
     }).then(async (res) => {
       navigate("/dashboard/");

@@ -11,7 +11,7 @@ const Tools = ({ setOrder }) => {
   const navigate = useNavigate();
   useEffect(() => {
     axiosPrivate
-      .get(`https://repain-server-side.herokuapp.com/services/${id}`)
+      .get(`http://localhost:5000/services/${id}`)
       .then(function (res) {
         setService(res.data);
       })
@@ -46,6 +46,7 @@ const Tools = ({ setOrder }) => {
             </label>
             <input
               type="number"
+              defaultValue={service.minOrderQuanity}
               onChange={(e) => setQuantityPrice(e.target.value)}
               className="input input-bordered"
             />

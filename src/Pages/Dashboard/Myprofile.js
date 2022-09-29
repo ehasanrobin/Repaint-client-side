@@ -24,7 +24,7 @@ const Myprofile = () => {
     e.preventDefault();
     axiosPrivate({
       method: "PUT",
-      url: `https://repain-server-side.herokuapp.com/user/${email}`,
+      url: `http://localhost:5000/user/${email}`,
       data: updateInfo,
     }).then(async (res) => {
       toast("Your Profile has been updated");
@@ -36,7 +36,7 @@ const Myprofile = () => {
     error,
     data: profile,
   } = useQuery(["users", user], () =>
-    fetch(`https://repain-server-side.herokuapp.com/users/${user.email}`, {
+    fetch(`http://localhost:5000/users/${user.email}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

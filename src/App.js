@@ -11,11 +11,14 @@ import Blogs from "./Pages/Blogs/Blogs";
 import Contact from "./Pages/Contact/Contact";
 import AddPost from "./Pages/Dashboard/AddPost";
 import AddReview from "./Pages/Dashboard/AddReview";
+import AllOroders from "./Pages/Dashboard/AllOroders";
 import AllUsers from "./Pages/Dashboard/AllUsers";
 import BlogsPost from "./Pages/Dashboard/BlogsPost";
 import Dashbaord from "./Pages/Dashboard/Dashbaord";
 import Myorders from "./Pages/Dashboard/Myorders";
 import Myprofile from "./Pages/Dashboard/Myprofile";
+import Products from "./Pages/Dashboard/Products";
+import UpdateProducts from "./Pages/Dashboard/UpdateProducts";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import Orders from "./Pages/Orders/Orders";
@@ -24,6 +27,7 @@ import Navbar from "./Pages/Shared/Navbar";
 import SignUp from "./Pages/SignUp/SignUp";
 import Tools from "./Pages/Tools/Tools";
 function App() {
+  document.title = "Arrowai";
   const [order, setOrder] = useState({});
   const [user] = useAuthState(auth);
   const [userAdmin, setUserAdmin] = useState({});
@@ -31,7 +35,7 @@ function App() {
   useEffect(() => {
     axiosPrivate({
       method: "GET",
-      url: `https://repain-server-side.herokuapp.com/users/${user?.email}`,
+      url: `http://localhost:5000/users/${user?.email}`,
     }).then((res) => {
       setUserAdmin(res.data);
     });
@@ -73,12 +77,15 @@ function App() {
             </PrivateRoute>
           }
         >
-          <Route path="myprofile" element={<Myprofile />} />
-          <Route index="true" element={<Myorders />} />
+          <Route index element={<Myprofile />} />
+          <Route path="myOrders" element={<Myorders />} />
           <Route path="addreview" element={<AddReview />} />
           <Route path="Allusers" element={<AllUsers />} />
           <Route path="blogs" element={<BlogsPost />} />
           <Route path="addPost" element={<AddPost />} />
+          <Route path="orders" element={<AllOroders />} />
+          <Route path="products" element={<Products />} />
+          <Route path="updateProduct/:id" element={<UpdateProducts />} />
         </Route>
       </Routes>
       <ToastContainer />

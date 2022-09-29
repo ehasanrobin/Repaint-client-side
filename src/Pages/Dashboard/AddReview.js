@@ -22,7 +22,7 @@ const AddReview = () => {
     };
     axiosPrivate({
       method: "POST",
-      url: `https://repain-server-side.herokuapp.com/reviews`,
+      url: `http://localhost:5000/reviews`,
       data: review,
     }).then(async (res) => {
       toast("Your Review has been submitted");

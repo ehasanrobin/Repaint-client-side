@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axiosPrivate from "../../Api/Axios";
 
-const OrderRow = ({ order }) => {
+const AllOrderRow = ({ order, index }) => {
   const navigate = useNavigate();
   const {
     _id,
@@ -30,8 +30,21 @@ const OrderRow = ({ order }) => {
     }
   };
 
+  const handleStatus = (id) => {
+    const proceed = window.confirm("Are you sure?want to make it Shipping");
+    if (proceed) {
+      axiosPrivate({
+        method: "PUT",
+        url: `http://localhost:5000/orders/${id}`,
+        data: { status: "shipped" },
+      }).then(async (res) => {
+        toast("order has been shipped");
+      });
+    }
+  };
   return (
     <tr>
+      <td>{index + 1}</td>
       <td>
         <div className="flex items-center space-x-3">
           <div>
@@ -49,11 +62,14 @@ const OrderRow = ({ order }) => {
       <td>{date}</td>
       <td className=" items-center justify-center">
         {status === "pending" ? (
-          <span className="badge badge-primary  badge-lg p-5 capitalize">
+          <span
+            onClick={() => handleStatus(_id)}
+            className="badge badge-primary  badge-lg p-5 capitalize"
+          >
             {status}
           </span>
         ) : (
-          <p className="text-success">{status}</p>
+          <p className="text-success">Shipped</p>
         )}
       </td>
       <th>
@@ -68,4 +84,4 @@ const OrderRow = ({ order }) => {
   );
 };
 
-export default OrderRow;
+export default AllOrderRow;

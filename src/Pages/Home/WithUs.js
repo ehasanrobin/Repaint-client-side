@@ -7,6 +7,7 @@ const WithUs = () => {
         <img
           src={orang}
           className=" w-full max-w-md rounded-full  flex-1 widthusImg"
+          alt=""
         />
         <div className="flex-1 p-12">
           <h1 className="text-5xl font-bold">

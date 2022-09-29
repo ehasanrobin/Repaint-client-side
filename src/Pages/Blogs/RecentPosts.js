@@ -9,7 +9,7 @@ const RecentPosts = () => {
   useEffect(() => {
     axiosPrivate({
       method: "GET",
-      url: `https://repain-server-side.herokuapp.com/recentPosts`,
+      url: `http://localhost:5000/recentPosts`,
     }).then((result) => {
       setBlogs(result.data);
     });

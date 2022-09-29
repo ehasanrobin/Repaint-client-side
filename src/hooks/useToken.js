@@ -9,7 +9,7 @@ const useToken = (user) => {
   };
 
   if (user) {
-    fetch(`https://repain-server-side.herokuapp.com/users/${user?.email}`, {
+    fetch(`http://localhost:5000/users/${user?.email}`, {
       method: "PUT", // Method itself
       headers: {
         "Content-type": "application/json; charset=UTF-8", // Indicates the content

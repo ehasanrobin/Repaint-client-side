@@ -12,7 +12,7 @@ const AllUsers = () => {
   const navigate = useNavigate();
   const [allUser, setAllUser] = useState([]);
   const { isLoading, error, data } = useQuery(["users", user], () =>
-    fetch(`https://repain-server-side.herokuapp.com/users`, {
+    fetch(`http://localhost:5000/users`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -39,7 +39,7 @@ const AllUsers = () => {
     if (proceed) {
       axiosPrivate({
         method: "PUT",
-        url: `https://repain-server-side.herokuapp.com/user/${user.email}`,
+        url: `http://localhost:5000/user/${user.email}`,
         data: role,
       }).then(async (res) => {});
     }
