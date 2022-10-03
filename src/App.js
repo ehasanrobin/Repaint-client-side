@@ -17,6 +17,7 @@ import BlogsPost from "./Pages/Dashboard/BlogsPost";
 import Dashbaord from "./Pages/Dashboard/Dashbaord";
 import Myorders from "./Pages/Dashboard/Myorders";
 import Myprofile from "./Pages/Dashboard/Myprofile";
+import Payment from "./Pages/Dashboard/Payment";
 import Products from "./Pages/Dashboard/Products";
 import UpdateProducts from "./Pages/Dashboard/UpdateProducts";
 import Home from "./Pages/Home/Home";
@@ -86,6 +87,7 @@ function App() {
           <Route path="orders" element={<AllOroders />} />
           <Route path="products" element={<Products />} />
           <Route path="updateProduct/:id" element={<UpdateProducts />} />
+          <Route path="payment/:id" element={<Payment />} />
         </Route>
       </Routes>
       <ToastContainer />

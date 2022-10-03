@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axiosPrivate from "../../Api/Axios";
 
@@ -15,6 +15,8 @@ const OrderRow = ({ order }) => {
     status,
     userZip,
     date,
+    paid,
+    transactionId,
   } = order;
 
   const handleDelete = (id) => {
@@ -57,13 +59,29 @@ const OrderRow = ({ order }) => {
         )}
       </td>
       <th>
-        <button
-          onClick={() => handleDelete(_id)}
-          className="btn btn-ghost btn-xs"
-        >
-          Cancel
-        </button>
+        {status === "pending" && paid !== true ? (
+          <button
+            onClick={() => handleDelete(_id)}
+            className="btn btn-ghost btn-xs"
+          >
+            Cancel
+          </button>
+        ) : (
+          <p className="text-success">completed</p>
+        )}
       </th>
+      <td>
+        {paid !== true ? (
+          <Link to={`/dashboard/payment/${_id}`} className="btn btn-primary ">
+            payment
+          </Link>
+        ) : (
+          <div>
+            <p className="text-success">paid</p>
+            <p className="text-success">{transactionId}</p>
+          </div>
+        )}
+      </td>
     </tr>
   );
 };
