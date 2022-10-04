@@ -24,7 +24,7 @@ const Myprofile = () => {
     e.preventDefault();
     axiosPrivate({
       method: "PUT",
-      url: `http://localhost:5000/user/${email}`,
+      url: `https://repaint-server-side.herokuapp.com/user/${email}`,
       data: updateInfo,
     }).then(async (res) => {
       toast("Your Profile has been updated");
@@ -36,13 +36,16 @@ const Myprofile = () => {
     error,
     data: profile,
   } = useQuery(["users", user], () =>
-    fetch(`http://localhost:5000/users/${user.email}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      },
-    }).then((res) => {
+    fetch(
+      `https://repaint-server-side.herokuapp.com/-side.herokuapp.com/users/${user.email}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      }
+    ).then((res) => {
       if (res.status === 401 || res.status === 403) {
         signOut(auth);
         localStorage.removeItem("accessToken");

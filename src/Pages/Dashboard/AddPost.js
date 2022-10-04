@@ -56,7 +56,7 @@ const AddPost = () => {
         };
         await axiosPrivate({
           method: "POST",
-          url: `http://localhost:5000/post`,
+          url: `https://repaint-server-side.herokuapp.com/post`,
           data: postData,
         }).then((result) => {
           toast("your post has been uplished");

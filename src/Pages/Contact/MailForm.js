@@ -19,7 +19,7 @@ const MailForm = () => {
 
     await axiosPrivate({
       method: "POST",
-      url: `http://localhost:5000/msg`,
+      url: `https://repaint-server-side.herokuapp.com/msg`,
       data: msgsend,
     }).then((result) => {
       toast("Your msg has been send");

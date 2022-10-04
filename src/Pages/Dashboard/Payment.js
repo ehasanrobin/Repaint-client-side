@@ -17,7 +17,7 @@ const Payment = () => {
     error,
     data: product,
   } = useQuery("singleData", () =>
-    fetch(`http://localhost:5000/order/${id}`, {
+    fetch(`https://repaint-server-side.herokuapp.com/order/${id}`, {
       method: "GET",
       headers: {
         "content-type": "application/json",

@@ -11,7 +11,7 @@ const Dashbaord = () => {
   useEffect(() => {
     axiosPrivate({
       method: "GET",
-      url: `http://localhost:5000/users/${user.email}`,
+      url: `https://repaint-server-side.herokuapp.com/users/${user.email}`,
     }).then((res) => {
       setUserAdmin(res.data);
     });

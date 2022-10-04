@@ -10,7 +10,7 @@ const Products = () => {
   useEffect(() => {
     axiosPrivate({
       method: "GET",
-      url: `http://localhost:5000/services`,
+      url: `https://repaint-server-side.herokuapp.com/services`,
     }).then((result) => {
       setServices(result.data);
     });

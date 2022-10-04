@@ -11,7 +11,7 @@ const BlogPosts = () => {
   useEffect(() => {
     axiosPrivate({
       method: "GET",
-      url: `http://localhost:5000/posts`,
+      url: `https://repaint-server-side.herokuapp.com/posts`,
     }).then((result) => {
       setBlogs(result.data);
     });

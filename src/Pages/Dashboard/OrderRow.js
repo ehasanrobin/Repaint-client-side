@@ -24,7 +24,7 @@ const OrderRow = ({ order }) => {
     if (proceed) {
       axiosPrivate({
         method: "DELETE",
-        url: `http://localhost:5000/orders/${id}`,
+        url: `https://repaint-server-side.herokuapp.com/orders/${id}`,
       }).then(async (res) => {
         navigate("/dashboard/");
         toast("Your Order has been deleted");

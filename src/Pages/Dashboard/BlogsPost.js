@@ -11,7 +11,7 @@ const BlogsPost = () => {
   useEffect(() => {
     axiosPrivate({
       method: "GET",
-      url: `http://localhost:5000/posts`,
+      url: `https://repaint-server-side.herokuapp.com/posts`,
     }).then((result) => {
       setBlogs(result.data);
     });
@@ -21,7 +21,7 @@ const BlogsPost = () => {
     if (proceed) {
       axiosPrivate({
         method: "DELETE",
-        url: `http://localhost:5000/post/${id}`,
+        url: `https://repaint-server-side.herokuapp.com/-side.herokuapp.com/post/${id}`,
       }).then((result) => {
         toast("Item Deleted");
       });

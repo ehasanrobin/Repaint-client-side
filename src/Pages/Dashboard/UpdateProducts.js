@@ -9,7 +9,7 @@ const UpdateProducts = () => {
   useEffect(() => {
     axiosPrivate({
       method: "GET",
-      url: `http://localhost:5000/services/${id.id}`,
+      url: `https://repaint-server-side.herokuapp.com/services/${id.id}`,
     }).then((result) => {
       setProduct(result.data);
     });
@@ -32,7 +32,7 @@ const UpdateProducts = () => {
     console.log(updateData);
     await axiosPrivate({
       method: "PUT",
-      url: `http://localhost:5000/services/${id.id}`,
+      url: `https://repaint-server-side.herokuapp.com/-side.herokuapp.com/-side.herokuapp.com/services/${id.id}`,
       data: updateData,
     }).then((result) => {
       console.log(result);

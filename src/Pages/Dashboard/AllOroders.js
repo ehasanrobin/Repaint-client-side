@@ -11,7 +11,7 @@ const AllOroders = () => {
   useEffect(() => {
     axiosPrivate({
       method: "GET",
-      url: `http://localhost:5000/allorders`,
+      url: `https://repaint-server-side.herokuapp.com/allorders`,
     }).then((result) => {
       setOrders(result.data);
     });
