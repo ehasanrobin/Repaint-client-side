@@ -13,7 +13,7 @@ const Myorders = () => {
     error,
     data: orders,
   } = useQuery(["orders", user], () =>
-    fetch(`https://repaint-server-side.herokuapp.com/orders/${user?.email}`, {
+    fetch(`https://repaint-server-side1.vercel.app/orders/${user?.email}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

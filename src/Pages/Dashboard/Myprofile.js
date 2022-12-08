@@ -24,7 +24,7 @@ const Myprofile = () => {
     e.preventDefault();
     axiosPrivate({
       method: "PUT",
-      url: `https://repaint-server-side.herokuapp.com/user/${email}`,
+      url: `https://repaint-server-side1.vercel.app/user/${email}`,
       data: updateInfo,
     }).then(async (res) => {
       toast("Your Profile has been updated");
@@ -37,7 +37,7 @@ const Myprofile = () => {
     data: profile,
   } = useQuery(["users", user], () =>
     fetch(
-      `https://repaint-server-side.herokuapp.com/-side.herokuapp.com/users/${user.email}`,
+      `https://repaint-server-side1.vercel.app/-side.herokuapp.com/users/${user.email}`,
       {
         method: "GET",
         headers: {

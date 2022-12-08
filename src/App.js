@@ -36,7 +36,7 @@ function App() {
   useEffect(() => {
     axiosPrivate({
       method: "GET",
-      url: `https://repaint-server-side.herokuapp.com/users/${user?.email}`,
+      url: `https://repaint-server-side1.vercel.app/users/${user?.email}`,
     }).then((res) => {
       setUserAdmin(res.data);
     });

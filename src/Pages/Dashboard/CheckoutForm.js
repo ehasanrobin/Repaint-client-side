@@ -50,7 +50,7 @@ const CheckoutForm = ({ product }) => {
           orderId: _id,
           transactionId: paymentIntent.id,
         };
-        fetch(`https://repaint-server-side.herokuapp.com/payments/${_id}`, {
+        fetch(`https://repaint-server-side1.vercel.app/payments/${_id}`, {
           method: "PATCH",
           headers: {
             "content-type": "application/json",
@@ -70,7 +70,7 @@ const CheckoutForm = ({ product }) => {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("https://repaint-server-side.herokuapp.com/create-payment-intent", {
+    fetch("https://repaint-server-side1.vercel.app/create-payment-intent", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ totalPrice }),

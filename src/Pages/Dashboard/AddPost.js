@@ -56,7 +56,7 @@ const AddPost = () => {
         };
         await axiosPrivate({
           method: "POST",
-          url: `https://repaint-server-side.herokuapp.com/post`,
+          url: `https://repaint-server-side1.vercel.app/post`,
           data: postData,
         }).then((result) => {
           toast("your post has been uplished");

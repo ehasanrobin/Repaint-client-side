@@ -5,7 +5,7 @@ const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("https://repaint-server-side.herokuapp.com/services")
+    fetch("https://repaint-server-side1.vercel.app/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

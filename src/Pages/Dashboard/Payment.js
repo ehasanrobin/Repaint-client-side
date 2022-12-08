@@ -17,7 +17,7 @@ const Payment = () => {
     error,
     data: product,
   } = useQuery("singleData", () =>
-    fetch(`https://repaint-server-side.herokuapp.com/order/${id}`, {
+    fetch(`https://repaint-server-side1.vercel.app/order/${id}`, {
       method: "GET",
       headers: {
         "content-type": "application/json",

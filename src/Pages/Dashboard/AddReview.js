@@ -22,7 +22,7 @@ const AddReview = () => {
     };
     axiosPrivate({
       method: "POST",
-      url: `https://repaint-server-side.herokuapp.com/reviews`,
+      url: `https://repaint-server-side1.vercel.app/reviews`,
       data: review,
     }).then(async (res) => {
       toast("Your Review has been submitted");

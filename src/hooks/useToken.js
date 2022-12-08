@@ -9,7 +9,7 @@ const useToken = (user) => {
   };
 
   if (user) {
-    fetch(`https://repaint-server-side.herokuapp.com/users/${user?.email}`, {
+    fetch(`https://repaint-server-side1.vercel.app/users/${user?.email}`, {
       method: "PUT", // Method itself
       headers: {
         "Content-type": "application/json; charset=UTF-8", // Indicates the content

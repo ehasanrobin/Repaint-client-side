@@ -11,7 +11,7 @@ const AllOroders = () => {
   useEffect(() => {
     axiosPrivate({
       method: "GET",
-      url: `https://repaint-server-side.herokuapp.com/allorders`,
+      url: `https://repaint-server-side1.vercel.app/allorders`,
     }).then((result) => {
       setOrders(result.data);
     });

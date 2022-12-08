@@ -11,7 +11,7 @@ const Tools = ({ setOrder }) => {
   const navigate = useNavigate();
   useEffect(() => {
     axiosPrivate
-      .get(`https://repaint-server-side.herokuapp.com/services/${id}`)
+      .get(`https://repaint-server-side1.vercel.app/services/${id}`)
       .then(function (res) {
         setService(res.data);
       })

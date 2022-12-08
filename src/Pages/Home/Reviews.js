@@ -13,7 +13,7 @@ const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   axiosPrivate({
     method: "GET",
-    url: `https://repaint-server-side.herokuapp.com/reviews`,
+    url: `https://repaint-server-side1.vercel.app/reviews`,
   }).then((res) => {
     setReviews(res.data);
   });

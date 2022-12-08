@@ -11,7 +11,7 @@ const BlogPosts = () => {
   useEffect(() => {
     axiosPrivate({
       method: "GET",
-      url: `https://repaint-server-side.herokuapp.com/posts`,
+      url: `https://repaint-server-side1.vercel.app/posts`,
     }).then((result) => {
       setBlogs(result.data);
     });

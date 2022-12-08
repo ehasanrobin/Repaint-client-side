@@ -11,7 +11,7 @@ const BlogsPost = () => {
   useEffect(() => {
     axiosPrivate({
       method: "GET",
-      url: `https://repaint-server-side.herokuapp.com/posts`,
+      url: `https://repaint-server-side1.vercel.app/posts`,
     }).then((result) => {
       setBlogs(result.data);
     });
@@ -21,7 +21,7 @@ const BlogsPost = () => {
     if (proceed) {
       axiosPrivate({
         method: "DELETE",
-        url: `https://repaint-server-side.herokuapp.com/-side.herokuapp.com/post/${id}`,
+        url: `https://repaint-server-side1.vercel.app/-side.herokuapp.com/post/${id}`,
       }).then((result) => {
         toast("Item Deleted");
       });

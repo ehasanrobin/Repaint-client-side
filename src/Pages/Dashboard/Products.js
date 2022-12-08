@@ -10,7 +10,7 @@ const Products = () => {
   useEffect(() => {
     axiosPrivate({
       method: "GET",
-      url: `https://repaint-server-side.herokuapp.com/services`,
+      url: `https://repaint-server-side1.vercel.app/services`,
     }).then((result) => {
       setServices(result.data);
     });

@@ -22,7 +22,7 @@ const AllOrderRow = ({ order, index }) => {
     if (proceed) {
       axiosPrivate({
         method: "DELETE",
-        url: `https://repaint-server-side.herokuapp.com/orders/${id}`,
+        url: `https://repaint-server-side1.vercel.app/orders/${id}`,
       }).then(async (res) => {
         navigate("/dashboard/");
         toast("Your Order has been deleted");
@@ -35,7 +35,7 @@ const AllOrderRow = ({ order, index }) => {
     if (proceed) {
       axiosPrivate({
         method: "PUT",
-        url: `https://repaint-server-side.herokuapp.com/-side.herokuapp.com/orders/${id}`,
+        url: `https://repaint-server-side1.vercel.app/-side.herokuapp.com/orders/${id}`,
         data: { status: "shipped" },
       }).then(async (res) => {
         toast("order has been shipped");
